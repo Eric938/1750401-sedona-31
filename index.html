@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <li><a href="">Карта штата</a></li>
         <li><a href="catalog.html">Гостиницы</a></li>
       </ul>
-      <a><img src="https://via.placeholder.com/" width="138" height="70" alt="Sedona"></a>
+      <a><img src="img/logo.png" width="138" height="70" alt="Sedona"></a>
     </nav>
   </header>
 
@@ -24,8 +25,9 @@
 
     <section>
       <h2>Добро пожаловать</h2>
-      <img src="https://via.placeholder.com/" width="1200" height="509" alt="Welcome to the gorgeous.
-      Sedona.Because the Grand Canyon sucks!">
+      <img src="img/welcome.svg" width="188" height="45" alt="Welcome">
+      <img src="img/gorgeous.svg" width="256" height="29" alt="to the gorgeous">
+      <img src="img/sedona.svg" width="457" height="213" alt="Sedona.Because the Grand Canyon sucks!">
     </section>
 
     <section>
@@ -34,31 +36,32 @@
       <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       <ol>
         <li>
-          <h4>Настоящий городок</h4>
-          <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-          <img src="https://via.placeholder.com/" width="800" height="256" alt="">
+          <div>
+            <h4>Настоящий городок</h4>
+            <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          </div>
+          <img src="img/image.jpg" width="800" height="256" alt="Пейзаж в Седоне">
           <ul>
             <li>
               <h5>Жильё</h5>
-              <p><img src="https://via.placeholder.com/" width="75" height="72" alt="house"></p>
               <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
             <li>
               <h5>Еда</h5>
-              <p><img src="https://via.placeholder.com/" width="75" height="72" alt="food"></p>
               <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li>
               <h5>Сувениры</h5>
-              <p><img src="https://via.placeholder.com/" width="75" height="72" alt="souvenir"></p>
               <p>Не только китайского, но и местного производства!</p>
             </li>
           </ul>
         </li>
         <li>
-          <h4>Там есть Мост дьявола</h4>
-          <img src="https://via.placeholder.com/" width="800" height="256" alt="">
-          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          <div>
+            <h4>Там есть Мост дьявола</h4>
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          </div>
+          <img src="img/bridge.jpg" width="800" height="256" alt="Каменный мост">
         </li>
         <li>
           <h4>небольшая площадь</h4>
@@ -78,15 +81,14 @@
     <section>
       <h2>Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <button type="button">Поиск гостиницы в седоне</button>
+      <a href="">Поиск гостиницы в седоне</a>
     </section>
 
     <section>
       <h2>Всплывающий фильтр</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label for="arrival">Дата заезда</label>
-        <input id="arrival" type="texe" name="arrival" placeholder="24 aпреля 2017">
+        <input id="arrival" type="text" name="arrival" placeholder="24 aпреля 2017">
       </p>
       <p>
         <label for="departure">Дата выезда</label>
@@ -95,17 +97,24 @@
       <p>
         <label for="adults">Взрослые</label>
         <input id="adults" type="text" name="adults" placeholder="2">
+        <a href=""><img src="img/calendar.svg" width="21" height="22" alt="календарь"></a>
         <button type="button">+</button>
         <button type="button">-</button>
       </p>
       <p>
-        <label for="kids">Взрослые</label>
+        <label for="kids">Дети</label>
         <input id="kids" type="text" name="kids" placeholder="0">
+        <a href=""><img src="img/calendar.svg" width="21" height="22" alt="календарь"></a>
         <button type="button">+</button>
         <button type="button">-</button>
       </p>
-      <a href="">Найти</a>
+      <button type="submit">Найти</button>
+    </section>
+
     <section>
+      <h2>Карта</h2>
+      <img src="img/map.jpg" width="1199" height="594" alt="Месторасположение Седоны">
+    </section>
   </main>
 
   <footer>
