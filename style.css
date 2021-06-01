@@ -1,0 +1,255 @@
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Roboto"),
+       url("./fonts/PTSans.woff2") format("woff2"),
+       url("./fonts/PTSans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: local("PTSans"),
+       url("./fonts/PTSans-Bold.woff2") format("woff2"),
+       url("./fonts/PTSans-Bold.woff2") format("woff");
+}
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #FFFFFF;
+  --basic-blue-light: #81B3D2;
+  --basic-blue: #669EC0;
+  --basic-blue-dark: #5496BD;
+  --basic-grey: #EEEEEE;
+  --basic-grey-light: #F2F2F2;
+  --basic-grey-dark: #EBEBEB;
+  --basic-grey-back:#888888;
+  --basic-brown-light: #766357;
+  --basic-brown: #604E43;
+  --basic-brown-dark: #503E33;
+}
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.site-nav {
+  list-style: none;
+  font-weight: 700;
+}
+
+.site-nav a {
+  color: var(--basic-black);
+}
+
+.site-nav a:hover {
+  color: var(--basic-blue-light);
+}
+
+.site-nav a:focus {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.welcome {
+  text-align: center;
+  background-image: url("img/background.jpg");
+  background-color: var(--basic-white);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.benefits {
+  text-align: center;
+}
+
+.benefits h3 {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.benefits-list {
+  text-align:left;
+  line-height: 21px;
+}
+
+.benefits-item div {
+  background-color:var(--basic-blue-light);
+  color: var(--basic-white);
+}
+
+.benefits-list h4 {
+  font-size: 21px;
+  font-weight: 700;
+}
+.features-list{
+  list-style: none;
+}
+
+.features-house {
+  line-height: 21px;
+  background-image: url("img/house.svg");
+  background-color:var(--basic-white);
+  background-repeat: no-repeat;
+}
+
+.features-list h5 {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.features-food {
+  line-height: 21px;
+  background-image: url("img/food.svg");
+  background-color:var(--basic-white);
+  background-repeat: no-repeat;
+}
+
+.features-gift {
+  line-height: 21px;
+  background-image: url("img/gift.svg");
+  background-color:var(--basic-white);
+  background-repeat: no-repeat;
+}
+.benefits-item-three, .benefits-item-four, .benefits-item-five{
+  background-color:var(--basic-grey);
+}
+
+.find {
+  line-height: 24px;
+  text-align: center;
+}
+
+.find h2 {
+  font-size: 30px;
+}
+
+.find a {
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-white);
+  background-color: var(--basic-brown-light);
+  font-weight: 700;
+}
+
+.popup {
+  text-align: center;
+  font-weight: 700;
+}
+
+.button-popup {
+  border: none;
+}
+
+.popup-item input {
+  border: none;
+}
+
+.field {
+  background-color: var(--basic-grey-light);
+}
+
+.field:hover {
+  background-color: var(--basic-grey-dark);
+}
+
+.field:focus {
+  background-color: var(--basic-white);
+  border: 2px solid #E5E5E5;
+  box-sizing: border-box;
+}
+
+.popup-item input::placeholder {
+  color: var(--basic-black);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.popup-form button[type="submit"] {
+  font-size: 21px;
+  color: var(--basic-white);
+  background-color: var(--basic-blue-light);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.popup-form button[type="submit"]:hover,
+.social-button:hover {
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+}
+
+.popup-form button[type="submit"]:focus,
+.social-button:focus {
+  color: var(--basic-white);
+  color: rgba(0, 0, 0, 0.3);
+  background-color: var(--basic-blue-dark);
+}
+
+.map {
+  text-align: center;
+}
+
+.main-footer {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.main-footer a{
+  color: var(--basic-black);
+}
+
+.footer-contacts {
+  font-size: 21px;
+}
+
+.twitter {
+  background-image: url("img/social/twitter.svg");
+  background-repeat: no-repeat;
+}
+
+.facebook {
+  background-image: url("img/social/fb.svg");
+  background-repeat: no-repeat;
+}
+
+.youtube {
+  background-image: url("img/social/youtube.svg");
+  background-repeat: no-repeat;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.social-button {
+  background-color: var(--basic-blue-light);
+}
+
+.footer-link {
+  background-image: url("img/logoacademy.svg");
+  background-repeat: no-repeat;
+}
