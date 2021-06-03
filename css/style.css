@@ -314,7 +314,7 @@ img {
   border:none;
   background-image: url(../img/line.svg), url(../img/oval.svg), url(../img/oval.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
 }
 
 .limit {
