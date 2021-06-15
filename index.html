@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
@@ -12,16 +12,16 @@
     <header class="main-header">
       <nav class="main-nav">
         <ul class="site-nav">
-          <li><a href="">Информация</a></li>
-          <li><a href="">Фото и видео</a></li>
-          <li><a href="">Карта штата</a></li>
-          <li><a href="catalog.html">Гостиницы</a></li>
+          <li class="first"><a href="">Информация</a></li>
+          <li class="left"><a href="">Фото и видео</a></li>
+          <li class="right"><a href="">Карта штата</a></li>
+          <li class="last"><a href="catalog.html">Гостиницы</a></li>
         </ul>
         <a class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Sedona"></a>
       </nav>
     </header>
 
-    <main>
+    <main class="main-page">
 
       <h1>Седона</h1>
 
@@ -31,14 +31,16 @@
       </section>
 
       <section class="benefits">
-        <h2>Преимущества</h2>
-        <h3>Седона — небольшой городок в Аризоне, заслуживающий большего! </h3>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <div class="reason">
+          <h2>Преимущества</h2>
+          <h3>Седона — небольшой городок в Аризоне, заслуживающий большего! </h3>
+          <p class="reason-text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </div>
         <ol class="benefits-list">
           <li class="benefits-item">
             <div class="benefits-description">
-              <h4>Настоящий городок</h4>
-              <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              <h4 class="real-title">Настоящий городок</h4>
+              <p class="real-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
             <div class="benefit-image">
               <img src="img/image.jpg" width="800" height="256" alt="Пейзаж в Седоне">
@@ -46,22 +48,22 @@
             <ul class="features-list">
               <li class="features-house">
                 <h5>Жильё</h5>
-                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                <p class="house">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
               <li class="features-food">
                 <h5>Еда</h5>
-                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                <p class="food">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li class="features-gift">
                 <h5>Сувениры</h5>
-                <p>Не только китайского, но и местного производства!</p>
+                <p class="gift">Не только китайского, но и местного производства!</p>
               </li>
             </ul>
           </li>
-          <li class="benefits-item">
+          <li class="benefits-item reverse">
             <div class="benefits-description">
-              <h4>Там есть Мост дьявола</h4>
-              <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              <h4 class="bridge-title">Там есть Мост дьявола</h4>
+              <p class="bridge-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
             <div class="benefit-image">
               <img src="img/bridge.jpg" width="800" height="256" alt="Каменный мост">
@@ -84,35 +86,37 @@
 
       <section class="find">
         <h2>Заинтересовались?</h2>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <p>Укажите предполагаемые даты поездки,  <br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <a href="" class="find-button button">Поиск гостиницы в седоне</a>
       </section>
 
       <section class="popup">
         <h2>Всплывающий фильтр</h2>
         <form class="popup-form" method="get" action="https://echo.htmlacademy.ru">
-          <p class="popup-item">
-            <label for="arrival">Дата заезда</label>
-            <input class="field" id="arrival" type="text" name="arrival" placeholder="" value="24 апреля 2017">
+          <p class="popup-item date-in">
+            <label for="arrival">Дата заезда:</label>
+            <input class="field date-arrival" id="arrival" type="text" name="arrival" placeholder="" value="24 апреля 2017">
             <button class="button-popup" type="button"><img src="img/calendar.svg" width="21" height="23" alt="календарь"></button>
           </p>
-          <p class="popup-item">
-            <label for="departure">Дата выезда</label>
-            <input class="field" id="departure" type="text" name="departure" placeholder="" value="4 июля 2017">
+          <p class="popup-item date-out">
+            <label for="departure">Дата выезда:</label>
+            <input class="field date-departure" id="departure" type="text" name="departure" placeholder="" value="4 июля 2017">
             <button class="button-popup" type="button"><img src="img/calendar.svg" width="21" height="23" alt="календарь"></button>
           </p>
-          <p class="popup-item">
-            <label for="adults">Взрослые</label>
-            <input class="field" id="adults" type="text" name="adults" placeholder="" value="2">
-            <button class="button-popup" type="button"><img src="img/plus.svg" width="11" height="11" alt="плюс"></button>
-            <button class="button-popup" type="button"><img src="img/minus.svg" width="12" height="3" alt="минус"></button>
-          </p>
-          <p class="popup-item">
-            <label for="kids">Дети</label>
-            <input class="field" id="kids" type="text" name="kids" placeholder="" value="0">
-            <button class="button-popup" type="button"><img src="img/plus.svg" width="11" height="11" alt="плюс"></button>
-            <button class="button-popup" type="button"><img src="img/minus.svg" width="12" height="3" alt="минус"></button>
-          </p>
+          <div class="quantity">
+            <p class="popup-item num-adults">
+              <label for="adults">Взрослые:</label>
+              <input class="field num" id="adults" type="text" name="adults" placeholder="" value="2">
+              <button class="button-popup button-plus" type="button"><img src="img/plus.svg" width="11" height="11" alt="плюс"></button>
+              <button class="button-popup button-minus" type="button"><img src="img/minus.svg" width="12" height="3" alt="минус"></button>
+            </p>
+            <p class="popup-item num-kids">
+              <label for="kids">Дети:</label>
+              <input class="field num" id="kids" type="text" name="kids" placeholder="" value="0">
+              <button class="button-popup button-plus" type="button"><img src="img/plus.svg" width="11" height="11" alt="плюс"></button>
+              <button class="button-popup button-minus" type="button"><img src="img/minus.svg" width="12" height="3" alt="минус"></button>
+            </p>
+          </div>
           <button class="button popup-find-button" type="submit">Найти</button>
         </form>
       </section>
@@ -139,7 +143,7 @@
         </ul>
       </section>
       <p class="footer-copyright">
-        Website by
+        <span class="copyright">Website by</span>
         <a class="footer-link" href="https://htmlacademy.ru"><img src="img/logoacademy.svg" width="115" height="33" alt="HTML Academy"></a>
       </p>
     </footer>
