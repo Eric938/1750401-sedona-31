@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
@@ -21,7 +21,7 @@
       </nav>
     </header>
 
-    <main>
+    <main  class="main-page">
 
       <h1>Каталог</h1>
 
@@ -75,25 +75,31 @@
 
       <section class="results">
         <h2>Результаты поиска</h2>
-        <h3>Сортировка:</h3>
-        <p class="found">Найдено: 3</p>
-        <ul class="sorting">
-          <li><button class="button-sorting selected" type="button">По цене</button></li>
-          <li><button class="button-sorting" type="button">По типу</button></li>
-          <li><button class="button-sorting" type="button">По рейтингу</button></li>
-        </ul>
-        <ul class="sorting">
-          <li><button class="button-triangle increase" type="button"><img src="img/up.svg" width="11" height="10" alt="по возрастанию"></button></li>
-          <li><button class="button-triangle decrease" type="button"><img src="img/down.svg" width="11" height="10" alt="по убыванию"></button></li>
-        </ul>
+        <div class="sorting-wrapper">
+          <h3>Сортировка:</h3>
+          <p class="found">Найдено: 3</p>
+          <ul class="sorting">
+            <li><button class="button-sorting selected" type="button">По цене</button></li>
+            <li><button class="button-sorting" type="button">По типу</button></li>
+            <li><button class="button-sorting" type="button">По рейтингу</button></li>
+          </ul>
+          <ul class="sorting triangle">
+            <li><button class="button-triangle increase" type="button"><img src="img/up.svg" width="11" height="10" alt="по возрастанию"></button></li>
+            <li><button class="button-triangle decrease" type="button"><img src="img/down.svg" width="11" height="10" alt="по убыванию"></button></li>
+          </ul>
+        </div>
         <div class="search-result">
           <div class="building-img"><img src="img/hotel.jpg" width="135" height="90" alt="Гостиница на фоне гор"></div>
           <div class="building">
             <h4 class="result-name"><a class="result-name-link" href="">Amara Resort & Spa</a></h4>
-            <span class="text">Гостиница</span>
-            <span class="text">От 4000 р</span>
-            <a class="button popup-find-button more-button" href="">подробнее</a>
-            <a class="button find-button reservation-button" href="">забронировать</a>
+            <div class="text-information">
+              <span class="text">Гостиница</span>
+              <span class="text">От 4000 р</span>
+            </div>
+            <div class="button-information">
+              <a class="button popup-find-button more-button" href="">подробнее</a>
+              <a class="button find-button reservation-button" href="">забронировать</a>
+            </div>
           </div>
           <div class="rating">
               <p class="rating-stars"><img src="img/4star.svg" width="91" height="17" alt="четыре звезды"></p>
@@ -104,10 +110,14 @@
           <div class="building-img"><img src="img/motel.jpg" width="135" height="90" alt="Мотель у дороги"></div>
           <div class="building">
             <h4 class="result-name"><a class="result-name-link" href="">Desert Quail Inn</a></h4>
-            <span class="text">Мотель</span>
-            <span class="text">От 3000 р</span>
-            <a class="button popup-find-button more-button" href="">подробнее</a>
-            <a class="button find-button reservation-button" href="">забронировать</a>
+            <div class="text-information">
+              <span class="text">Мотель</span>
+              <span class="text">От 3000 р</span>
+            </div>
+            <div class="button-information">
+              <a class="button popup-find-button more-button" href="">подробнее</a>
+              <a class="button find-button reservation-button" href="">забронировать</a>
+            </div>
           </div>
           <div class="rating">
             <p class="rating-stars"><img src="img/3star.svg" width="66" height="17" alt="три звезды"></p>
@@ -118,10 +128,14 @@
           <div class="building-img"><img src="img/apartaments.jpg" width="135" height="90" alt="Дом среди деревьев"></div>
           <div class="building">
             <h4 class="result-name"><a class="result-name-link" href="">Villas at Poco Diablo</a></h4>
-            <span class="text">Апартаменты</span>
-            <span class="text">От 2000 р</span>
-            <a class="button popup-find-button more-button" href="">подробнее</a>
-            <a class="button find-button reservation-button" href="">забронировать</a>
+            <div class="text-information">
+              <span class="text">Апартаменты</span>
+              <span class="text">От 2000 р</span>
+            </div>
+            <div class="button-information">
+              <a class="button popup-find-button more-button" href="">подробнее</a>
+              <a class="button find-button reservation-button" href="">забронировать</a>
+            </div>
           </div>
           <div class="rating">
             <p class="rating-stars"><img src="img/2star.svg" width="42" height="17" alt="две звезды"></p>
@@ -147,7 +161,7 @@
         </ul>
       </section>
       <p class="footer-copyright">
-        Website by
+        <span class="copyright">Website by</span>
         <a class="footer-link" href="https://htmlacademy.ru"><img src="img/logoacademy.svg" width="115" height="33" alt="HTML Academy"></a>
       </p>
     </footer>
