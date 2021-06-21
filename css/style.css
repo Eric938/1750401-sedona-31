@@ -255,7 +255,7 @@ img {
   line-height: 21px;
   list-style: none;
   display: grid;
-  grid-template-columns: 73px 127px 200px 200px 200px 200px 127px 73px;
+  grid-template-columns: repeat(3, 400px);
   margin: 0;
   padding: 0;
 }
@@ -273,20 +273,16 @@ img {
 .features-house {
   background-image: url("../img/house.svg");
   background-position: center 60px;
-  grid-column: 1/4;
-
 }
 
 .features-food {
   background-image: url("../img/food.svg");
   background-position: center 61px;
-  grid-column: 4/6;
 }
 
 .features-gift {
   background-image: url("../img/gift.svg");
   background-position: center 56px;
-  grid-column: 6/-1;
 }
 
 .features-list h5 {
@@ -347,6 +343,7 @@ img {
 }
 
 .search-block {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -373,7 +370,8 @@ img {
 }
 
 .popup-form-wrapper {
-  position: relative;
+  position: absolute;
+  top: 100%;
   z-index: 2;
   text-align: center;
   font-weight: 700;
@@ -641,7 +639,7 @@ img {
   flex-direction: column;
   min-width: 310px;
   padding: 10px;
-  margin: 16px 63px 22px 291px;
+  margin: 16px 63px 22px auto;
 }
 
 .cost legend {
@@ -862,22 +860,18 @@ img {
 
 .more-button,
 .reservation-button {
-  display: block;
+  display: inline-block;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
   padding: 3px 16px;
   margin: 0;
+  width: auto;
 }
 
 .more-button {
-  width: 115px;
   margin-right: 6px;
   margin-left: 9px;
-}
-
-.reservation-button {
-  width: 148px;
 }
 
 .rating-number {
