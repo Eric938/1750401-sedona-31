@@ -57,6 +57,19 @@ img {
   height: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .button {
   font-family: inherit;
   font-size: 21px;
@@ -74,7 +87,7 @@ img {
 .container {
   margin: 0 auto;
   background-color: var(--basic-white);
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
   width: 1200px;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -145,6 +158,7 @@ img {
   flex-direction: column;
   min-height: 509px;
   align-items: center;
+  justify-content: center;
 }
 
 .benefits {
@@ -159,25 +173,23 @@ img {
   flex-direction: column;
   padding: 10px;
   margin: 0;
+  align-items: center;
 }
 
 .reason h3 {
   font-size: 21px;
   font-weight: 700;
   width: 480px;
-  align-self: center;
   text-align: center;
-  margin: 0;
-  margin-bottom: 6px;
+  margin: 21px 0;
   padding: 10px;
 }
 
 .reason-text {
   width: 530px;
-  align-self: center;
   text-align: center;
   padding: 10px;
-  margin-bottom: 31px;
+  margin: 0;
 }
 
 .benefits-list {
@@ -248,7 +260,11 @@ img {
 
 .benefit-image {
   width: 800px;
-  height: 256px;
+  min-height: 256px;
+}
+
+.benefit-image img {
+  display: block;
 }
 
 .features-list {
@@ -337,8 +353,7 @@ img {
 .find p {
   width: 440px;
   text-align: center;
-  margin: 0;
-  margin-bottom: 22px;
+  margin: 10px 0 22px;
   padding: 10px;
 }
 
@@ -448,6 +463,16 @@ img {
   z-index: 1;
 }
 
+.button-popup:hover rect,
+.button-popup:hover path {
+  fill: var(--basic-black);
+}
+
+.button-popup:active rect,
+.button-popup:active path {
+  fill: var(--basic-blue-light);
+}
+
 .calendar,
 .plus {
   right: 0;
@@ -492,6 +517,7 @@ img {
 .main-footer {
   background: rgba(255, 255, 255, 0.9);
   display: flex;
+  align-items: center;
 }
 
 .main-footer a {
@@ -508,6 +534,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 8px 0 21px;
 }
 
 .footer-tag {
@@ -518,19 +545,6 @@ img {
 .footer-phone {
   padding: 5px;
   margin: 0;
-  margin-bottom: 30px;
-}
-
-.twitter {
-  background-image: url("../img/social/twitter.svg");
-}
-
-.facebook {
-  background-image: url("../img/social/fb.svg");
-}
-
-.youtube {
-  background-image: url("../img/social/youtube.svg");
 }
 
 .footer-social {
@@ -549,10 +563,15 @@ img {
 }
 
 .social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--basic-blue-light);
   background-repeat: no-repeat;
-  margin: 0;
-  margin-right: 6px;
+  background-position: center;
+  width: 46px;
+  height: 48px;
+  margin: 0 6px 5px 0;
 }
 
 .social-button:hover {
@@ -563,18 +582,31 @@ img {
   background-color: var(--basic-blue-dark);
 }
 
+.social-button:active path {
+  opacity: 0.3;
+}
+
 .footer-copyright {
   width: 380px;
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 
 .copyright {
   padding: 10px;
-  margin:0;
+  margin: 0;
   margin-right: 5px;
+}
+
+.footer-link:hover path {
+  fill: var(--basic-blue-light);
+}
+
+.footer-link:active path {
+  fill: #BDBBBC;
 }
 
 .catalog-filter {
@@ -601,13 +633,13 @@ img {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  margin: 16px 36px 0px 63px;
+  margin: 16px 36px 0 63px;
 }
 
 .filter legend {
   font-size: 16px;
   font-weight: 700;
-  padding: 10px 0px;
+  padding-top: 10px;
 }
 
 .filter-list {
@@ -620,7 +652,7 @@ img {
 
 .filter-item {
   display: flex;
-  padding: 10px 0px;
+  padding: 10px 0;
   margin-top: 5px;
 }
 
@@ -645,7 +677,7 @@ img {
 .cost legend {
   font-size: 16px;
   font-weight: 700;
-  padding: 10px 0px;
+  padding: 10px;
 }
 
 .limit {
@@ -671,7 +703,6 @@ img {
 .limit-max {
   left: 150px;
 }
-
 
 .filter-button {
   font-size: 14px;
@@ -880,7 +911,7 @@ img {
   color:  #666666;
   background-color: var(  --basic-grey-light);
   padding: 3px 14px;
-  margin: 48px 0px 20px;
+  margin: 48px 0 20px;
 }
 
 .rating-stars {
