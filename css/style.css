@@ -69,7 +69,8 @@ img {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -95,6 +96,7 @@ img {
   box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
   width: 1200px;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   position: relative;
@@ -732,6 +734,10 @@ img {
   background-position: 0 0;
 }
 
+.filter-item input:focus + label::before {
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .cost {
   border:none;
   display: flex;
@@ -911,6 +917,7 @@ img {
   border-bottom: 1px dotted var(--basic-blue-light);
   background-color: transparent;
   padding: 0;
+  cursor: pointer;
 }
 
 .selected {
@@ -937,6 +944,7 @@ img {
   padding: 0;
   width: 25px;
   height: 40px;
+  cursor: pointer;
 }
 
 .search-result {
