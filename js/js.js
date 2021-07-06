@@ -9,11 +9,13 @@ const kids = popup.querySelector(".kids");
 findButton.addEventListener("click",function (evt) {
   evt.preventDefault();
   popup.classList.toggle("popup-show");
+  popup.classList.remove("modal-error");
 });
 
 popupForm.addEventListener("submit", function (evt) {
   if (!dateArrival.value || !dateDeparture.value || !adults.value || !kids.value) {
     evt.preventDefault();
+    popup.classList.add("modal-error");
   } else {
     localStorage.setItem("adults", adults.value);
     localStorage.setItem("kids", kids.value);
