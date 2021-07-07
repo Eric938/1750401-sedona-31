@@ -271,10 +271,6 @@ img {
   grid-column: 2/-1;
 }
 
-.reverse {
-  grid-auto-flow: dense;
-}
-
 .reverse-description {
   grid-column: 3/4;
 }
